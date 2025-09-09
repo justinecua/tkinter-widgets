@@ -1,16 +1,16 @@
-# Byte-compiled / optimized / DLL files
+
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Environment files
 .env
 venv/
 env/
 
-# OS files
 .DS_Store
 Thumbs.db
-
-# Tkinter temporary or log files (optional)
 *.log
+
+/dist/
+/build/
+*.spec
