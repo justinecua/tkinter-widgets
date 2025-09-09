@@ -20,7 +20,7 @@ cd tkinter-widgets
 ```
 Create a virtual environment:
 ```
-py -m venv venv
+py -m venv env
 ```
 
 # Linux / macOS
@@ -29,7 +29,7 @@ source venv/bin/activate
 ```
 # Windows
 ```
-venv\Scripts\activate
+.\venv\Scripts\activate
 ```
 
 Install required packages (if any, e.g., PIL for images):
@@ -49,7 +49,7 @@ pip install pyinstaller
 ```
 Build the .exe:
 ```
-pyinstaller --onefile --windowed run.py
+pyinstaller --onefile --windowed main.py
 ```
 
 ```
@@ -59,20 +59,20 @@ pyinstaller --onefile --windowed run.py
 
 Optional: Add an icon:
 ```
-pyinstaller --onefile --windowed --icon=myicon.ico run.py
+pyinstaller --onefile --windowed --icon=myicon.ico main.py
 ```
 
 Find the .exe:
 After building, your executable will be in the dist folder:
 ```
 dist/
- └─ run.exe
+ └─ main.exe
 ```
 Note
 If your app uses images, fonts, or other files, include them using --add-data:
 
 ```
-pyinstaller --onefile --windowed --add-data "assets;assets" run.py
+pyinstaller --onefile --windowed --add-data "assets;assets" main.py
 ```
 Always test the .exe on a computer without Python installed to ensure it works.
 
