@@ -15,7 +15,7 @@ Demonstrates various Tkinter widgets (Labels, Inputs, Buttons, Text, Images, Fra
 **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/tkinter-widgets.git
+git clone https://github.com/justinecua/tkinter-widgets.git
 cd tkinter-widgets
 ```
 Create a virtual environment:
