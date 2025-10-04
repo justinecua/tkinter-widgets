@@ -128,11 +128,9 @@ def create_semi_final(root):
     # ---- Questions Page
     questions_page = ctk.CTkFrame(content_frame, fg_color="#f8f9fa")
 
-    # Create main container with padding
     container = ctk.CTkFrame(questions_page, fg_color="#FFFFFF", corner_radius=12)
     container.pack(fill="both", expand=True, padx=20, pady=20)
 
-    # Scrollable content area
     canvas = ctk.CTkCanvas(container, bg="#FFFFFF", highlightthickness=0)
     canvas.pack(side="left", fill="both", expand=True)
 
@@ -231,7 +229,7 @@ def create_semi_final(root):
         buttons[name].configure(fg_color="#f8fafb", text_color="#38675d", font=button_font_bold)
 
     # ==============================
-    # Sidebar (no images now)
+    # Sidebar
     # ==============================
     ctk.CTkLabel(left_nav, text="OOP Semi Final Exam",
                  text_color="#2a3f5a", fg_color="transparent",
