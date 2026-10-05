@@ -1,12 +1,21 @@
 import tkinter as tk
 import customtkinter
 from authActivity.backend.UserAccount import UserAccount
+from PIL import Image, ImageTk
 
 class Auth(tk.Frame):
     def __init__(self, master):
-        super().__init__(master, bg="#f5f5f5")
+        super().__init__(master)
         self.user = UserAccount()
         self.pack(fill="both", expand=True)
+
+        self.bg_image = Image.open("assets/images/bg3.jpg") 
+        self.bg_image = self.bg_image.resize((master.winfo_screenwidth(),
+                                              master.winfo_screenheight()))
+        self.bg_photo = ImageTk.PhotoImage(self.bg_image)
+        self.bg_label = tk.Label(self, image=self.bg_photo)
+        self.bg_label.place(relx=0.5, rely=0.5, anchor="center")
+        self.bg_label.lower()  
 
         self.notif_label = customtkinter.CTkLabel(
             self,
@@ -19,12 +28,14 @@ class Auth(tk.Frame):
             corner_radius=5
         )
         self.notif_label.place(relx=1.0, rely=1.0, anchor="se", y=-10, x=-10)
+        self.notif_label.place_forget()  
 
         self.current_frame = None
         self.show_login()
 
     def show_notif(self, message):
         if message:
+            self.notif_label.place(relx=1.0, rely=1.0, anchor="se", y=-10, x=-10)
             self.notif_label.configure(text=message, fg_color="#ffffff")  
             self.notif_label.lift()
             self.after(3000, self.clear_notif)
@@ -32,7 +43,8 @@ class Auth(tk.Frame):
             self.clear_notif()
 
     def clear_notif(self):
-        self.notif_label.configure(text="", fg_color='transparent')
+        self.notif_label.place_forget()
+
 
     def clear_frame(self):
         if self.current_frame is not None:
