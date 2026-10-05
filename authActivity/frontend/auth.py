@@ -9,7 +9,7 @@ class Auth(tk.Frame):
         self.user = UserAccount()
         self.pack(fill="both", expand=True)
 
-        self.bg_image = Image.open("assets/images/bg3.jpg") 
+        self.bg_image = Image.open("assets/images/bg2.jpg") 
         self.bg_image = self.bg_image.resize((master.winfo_screenwidth(),
                                               master.winfo_screenheight()))
         self.bg_photo = ImageTk.PhotoImage(self.bg_image)

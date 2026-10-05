@@ -8,7 +8,7 @@ class MyApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Tkinter Label Demo")
-        center_window(self, 1600, 1300)
+        center_window(self, 1000, 900)
         Auth(self)
 
 def main():

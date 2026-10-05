@@ -1,7 +1,7 @@
 import os
 
 class UserAccount:
-    def __init__(self, filename="/home/ylle/NewVolume/Python/tkinter/authActivity/database/accounts.txt"):
+    def __init__(self, filename="C:/Users/CC1/Downloads/Tkinter3/authActivity/database/accounts.txt"):
         self.filename = filename
         self.accounts = {}
         self.current_user = None
